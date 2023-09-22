@@ -2,11 +2,11 @@ const { SpeechClient } = require('@google-cloud/speech');
 const fs = require('fs');
 
 // Ruta al archivo de audio que deseas convertir a Base64
-const audioFilePath = 'audio-files/audio.wav';
+const audioFilePath = './../audio-files/audio.wav';
 
 // Creamos cliente Google Speech
 const speechClient = new SpeechClient({
-    keyFilename: 'credentials/service-account.json'
+    keyFilename: './../credentials/service-account.json'
 });
 
 enum AudioEncoding {
