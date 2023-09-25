@@ -5,9 +5,20 @@ const fs = require('fs');
 const audioFilePath = './../audio-files/audio.wav';
 
 // Creamos cliente Google Speech
+// Alternativa 1: Usando Keyfile
 const speechClient = new SpeechClient({
     keyFilename: './../credentials/service-account.json'
 });
+
+// Alternativa 2: Usando authenticación.
+/*
+const speechClient = new SpeechClient({
+    credentials: {
+        client_email: 'speech-text-service@project.iam.gserviceaccount.com',
+        private_key: '-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w',
+    }
+});
+*/
 
 enum AudioEncoding {
     ENCODING_UNSPECIFIED = 0,
